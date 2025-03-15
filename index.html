@@ -37,28 +37,28 @@
     <h2>Management Team</h2>
     <div id="management-gallery"></div>
 </section>
+    <section id="management">
+    <h2>Management & Faculty</h2>
+    <div id="faculty-gallery"></div>
+</section>
 
 <script>
-    // List of image filenames (Upload your images to the GitHub repository)
-    const imageFiles = [
-        "management1.jpg",
-        "faculty1.jpg",
-        "faculty2.jpg",
-        "faculty3.jpg"
-    ];
+    // List of faculty images
+    const facultyImages = ["faculty1.jpg", "faculty2.jpg", "faculty3.jpg"];
 
-    // Get the management-gallery div
-    const galleryDiv = document.getElementById("management-gallery");
+    // Get the gallery div
+    const galleryDiv = document.getElementById("faculty-gallery");
 
     // Loop through images and add them dynamically
-    imageFiles.forEach(image => {
+    facultyImages.forEach(image => {
         let imgElement = document.createElement("img");
         imgElement.src = image;
-        imgElement.alt = "Management Team Member";
-        imgElement.width = 200; // Set image width
-        imgElement.style.margin = "10px"; // Add spacing
+        imgElement.alt = "Faculty Member";
+        imgElement.width = 200;
+        imgElement.style.margin = "10px";
         galleryDiv.appendChild(imgElement);
     });
+</script>
 </script>
 <section id="sports">
     <h2>Sports Activities</h2>
