@@ -23,27 +23,115 @@
             <li><a href="#contact">Contact Us</a></li>
         </ul>
     </nav>
-
-    <section id="courses">
-        <h2>Courses</h2>
-        <p>Details about courses will be added here.</p>
-    </section>
+<section id="courses">
+    <h2>Courses Offered</h2>
+    <ul>
+        <li><strong>Bachelor of Science (B.Sc)</strong> – Computer Science, Mathematics, Physics</li>
+        <li><strong>Bachelor of Commerce (B.Com)</strong> – General, Computers, Taxation</li>
+        <li><strong>Bachelor of Science (BZC)</strong> – Botany, Zoology, Chemistry</li>
+    </ul>
+</section>
+   
 
     <section id="management">
-        <h2>Management</h2>
-        <p>Photos of management and faculty members.</p>
-    </section>
+    <h2>Management Team</h2>
+    <div id="management-gallery"></div>
+</section>
 
-    <section id="sports">
-        <h2>Sports</h2>
-        <p>Photos and videos of sports activities.</p>
-    </section>
+<script>
+    // List of image filenames (Upload your images to the GitHub repository)
+    const imageFiles = [
+        "management1.jpg",
+        "faculty1.jpg",
+        "faculty2.jpg",
+        "faculty3.jpg"
+    ];
 
-    <section id="placements">
-        <h2>Placements</h2>
-        <p>List of students placed in companies.</p>
-    </section>
+    // Get the management-gallery div
+    const galleryDiv = document.getElementById("management-gallery");
 
+    // Loop through images and add them dynamically
+    imageFiles.forEach(image => {
+        let imgElement = document.createElement("img");
+        imgElement.src = image;
+        imgElement.alt = "Management Team Member";
+        imgElement.width = 200; // Set image width
+        imgElement.style.margin = "10px"; // Add spacing
+        galleryDiv.appendChild(imgElement);
+    });
+</script>
+<section id="sports">
+    <h2>Sports Activities</h2>
+    <div id="sports-gallery"></div>
+</section>
+
+<script>
+    // List of sports images and videos (Upload to GitHub repository)
+    const sportsFiles = [
+        { type: "image", src: "sports1.jpg" },
+        { type: "image", src: "sports2.jpg" },
+        { type: "video", src: "sports-video1.mp4" },
+        { type: "video", src: "sports-video2.mp4" }
+    ];
+
+    // Get the sports-gallery div
+    const sportsDiv = document.getElementById("sports-gallery");
+
+    // Loop through the files and display them dynamically
+    sportsFiles.forEach(file => {
+        let element;
+        if (file.type === "image") {
+            element = document.createElement("img");
+            element.src = file.src;
+            element.alt = "Sports Activity";
+            element.width = 200;
+            element.style.margin = "10px";
+        } else if (file.type === "video") {
+            element = document.createElement("video");
+            element.src = file.src;
+            element.controls = true;
+            element.width = 300;
+            element.style.margin = "10px";
+        }
+        sportsDiv.appendChild(element);
+    });
+</script>
+    
+
+<section id="placements">
+    <h2>Our Placements</h2>
+    <div id="placements-list"></div>
+</section>
+
+<script>
+    // List of students (Modify this list to add new students)
+    const students = [
+        { name: "Student Name 1", role: "Job Role at Company", image: "student1.jpg", achievement: "Best Performer in AI Research" },
+        { name: "Student Name 2", role: "Job Role at Company", image: "student2.jpg", achievement: "Top Scorer in National Coding Contest" }
+    ];
+
+    // Get the placements-list div
+    const placementsDiv = document.getElementById("placements-list");
+
+    // Loop through student data and dynamically add to the webpage
+    students.forEach(student => {
+        let studentDiv = document.createElement("div");
+        studentDiv.style.marginBottom = "20px";
+
+        let imgElement = document.createElement("img");
+        imgElement.src = student.image;
+        imgElement.alt = student.name;
+        imgElement.width = 150;
+        imgElement.style.marginRight = "10px";
+
+        let details = document.createElement("p");
+        details.innerHTML = `<strong>${student.name}</strong> - ${student.role} <br> <em>${student.achievement}</em>`;
+
+        studentDiv.appendChild(imgElement);
+        studentDiv.appendChild(details);
+        placementsDiv.appendChild(studentDiv);
+    });
+</script>
     <section id="facilities">
         <h2>Facilities</h2>
         <p>Details of all available facilities in the college.</p>
@@ -63,81 +151,13 @@
             
             <button type="submit">Send Message</button>
         </form>
-        <p>Or visit us at: <a href="https://www.google.com/maps?q=Your+College+Location" target="_blank">View on Google Maps</a></p>
-    </section>
-
-    <footer>
-        <p>© 2025 Vishwabharati Degree College. All Rights Reserved.</p>
-    </footer>
-
-</body>
-                                                             </html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vishwabharati Degree College | JRC Institutions</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header>
-        <h1>Vishwabharati Degree College</h1>
-        <p>Under JRC Institutions</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#courses">Courses</a></li>
-            <li><a href="#management">Management</a></li>
-            <li><a href="#sports">Sports</a></li>
-            <li><a href="#placements">Placements</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
-
-    <section id="courses">
-        <h2>Courses</h2>
-        <p>Details about courses will be added here.</p>
-    </section>
-
-    <section id="management">
-        <h2>Management</h2>
-        <p>Photos of management and faculty members.</p>
-    </section>
-
-    <section id="sports">
-        <h2>Sports</h2>
-        <p>Photos and videos of sports activities.</p>
-    </section>
-
-    <section id="placements">
-        <h2>Placements</h2>
-        <p>List of students placed in companies.</p>
-    </section>
-
-    <section id="facilities">
-        <h2>Facilities</h2>
-        <p>Details of all available facilities in the college.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit">Send Message</button>
-        </form>
-        <p>Or visit us at: <a href="https://www.google.com/maps?q=Your+College+Location" target="_blank">View on Google Maps</a></p>
-    </section>
+        <section id="location">
+    <h2>Our Location</h2>
+    <p>Find us on Google Maps:</p>
+    <a href="https://www.google.com/maps?q=Your+College+Location" target="_blank">
+        <button>Open in Google Maps</button>
+    </a>
+</section>
 
     <footer>
         <p>© 2025 Vishwabharati Degree College. All Rights Reserved.</p>
